@@ -1,5 +1,6 @@
 package dev.tanto;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -15,6 +16,11 @@ public class MainController {
     void onClickSearchButton(ActionEvent event) {
         System.out.println("Keresés");
         App.setRoot("nameScene");
+    }
+    @FXML
+    void onClickExitButton(ActionEvent event) {
+        // System.exit(0);
+        Platform.exit();
     }
 
 }
