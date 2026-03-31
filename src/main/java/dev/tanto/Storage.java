@@ -23,7 +23,13 @@ private static ArrayList<NameDict> tryreadContent() throws FileNotFoundException
         sc.nextLine();
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            System.out.println(line);
+            NameDict nameDict = new NameDict();
+            String[] lineArray = line.split(";");
+            if (lineArray.length > 1) {
+                nameDict.setHunName(lineArray[0]);
+                nameDict.setItName(lineArray[1]);
+                nameDictList.add(nameDict);
+            }
         }
     }
     return nameDictList;
