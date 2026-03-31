@@ -23,6 +23,13 @@ public class App extends Application {
     }
 
     static void setRoot(String fxml) throws IOException {
+        try {
+            trysetRoot(fxml);
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+    static void trysetRoot(String fxml) throws IOException { //Setroot fontos
         scene.setRoot(loadFXML(fxml));
     }
 
@@ -32,7 +39,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        Storage.readContent();
+        // Storage.readContent();
         launch();
         
     }

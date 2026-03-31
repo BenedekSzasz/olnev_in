@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.tanto.MainController">
+   <children>
+      <Button layoutX="139.0" layoutY="132.0" mnemonicParsing="false" onAction="#onClickAboutButton" prefHeight="25.0" prefWidth="323.0" text="Névjegy" />
+      <Button layoutX="139.0" layoutY="67.0" mnemonicParsing="false" onAction="#onClickSearchButton" prefHeight="25.0" prefWidth="323.0" text="Névkeresés" />
+      <Label layoutX="186.0" layoutY="14.0" prefHeight="35.0" prefWidth="228.0" text="Olasz nevek keresése" textFill="#a40000">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

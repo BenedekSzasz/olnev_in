@@ -17,7 +17,8 @@ public class Storage {
 
 private static ArrayList<NameDict> tryreadContent() throws FileNotFoundException {
     ArrayList<NameDict> nameDictList = new ArrayList<>();
-    File file = new File("adat.txt");
+    String fileName = Prop.getFilename();
+    File file = new File(fileName);
     try (Scanner sc = new Scanner(file, "utf8")) {
         sc.nextLine();
         while (sc.hasNextLine()) {
