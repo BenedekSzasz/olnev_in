@@ -1,21 +1,19 @@
 package dev.tanto;
 
-import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 public class MainController {
 
     @FXML
-    void onClickAboutButton(ActionEvent event) throws IOException {
-        System.out.println("Névjegy...");
+    void onClickAboutButton(ActionEvent event) {
+        System.out.println("névjegy...");
         App.setRoot("aboutScene");
     }
 
     @FXML
-    void onClickSearchButton(ActionEvent event) throws IOException {
-        System.out.println("Keresés...");
+    void onClickSearchButton(ActionEvent event) {
+        System.out.println("Keresés");
         App.setRoot("nameScene");
     }
 

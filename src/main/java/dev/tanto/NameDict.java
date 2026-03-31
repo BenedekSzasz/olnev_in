@@ -1,18 +1,18 @@
 package dev.tanto;
 
 public class NameDict {
-    String hunName;
+    String huName;
     String itName;
-    public NameDict(){}
-    public NameDict(String hunName, String itName){
-        this.hunName = hunName;
+    public NameDict() {}
+    public NameDict(String huName, String itName) {
+        this.huName = huName;
         this.itName = itName;
     }
-    public String getHunName() {
-        return hunName;
+    public String getHuName() {
+        return huName;
     }
-    public void setHunName(String hunName) {
-        this.hunName = hunName;
+    public void setHuName(String huName) {
+        this.huName = huName;
     }
     public String getItName() {
         return itName;
@@ -20,5 +20,6 @@ public class NameDict {
     public void setItName(String itName) {
         this.itName = itName;
     }
+    
     
 }

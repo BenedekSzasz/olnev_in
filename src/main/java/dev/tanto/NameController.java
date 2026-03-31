@@ -1,45 +1,42 @@
 package dev.tanto;
 
-import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class NameController {
-
-
 
     @FXML
     private Label countNameLabel;
 
     @FXML
-    private TextArea huNameField;
+    private TextField huNameField;
 
     @FXML
-    private TextArea itNameField;
+    private TextField itNameField;
 
     @FXML
-    void initialize(){
-        System.out.println("Töltés....");
+    void initialize() {
+        System.out.println("tölt...");
         Integer size = App.nameDictList.size();
         countNameLabel.setText(size.toString());
     }
 
     @FXML
-    void onClickBackButton(ActionEvent event) throws IOException {
+    void onClickBackButton(ActionEvent event) {
         App.setRoot("mainScene");
     }
 
     @FXML
     void onClickSearchButton(ActionEvent event) {
-        System.out.println(App.nameDictList.get(0).getHunName());
+        System.out.println(App.nameDictList.get(0).getHuName());
         String huName = huNameField.getText();
-        for(NameDict nameDict : App.nameDictList) {
-            if(huName.equals(nameDict.getHunName())) {
+        for(NameDict nameDict : App.nameDictList ) {
+            if(huName.equals(nameDict.getHuName())) {
                 itNameField.setText(nameDict.getItName());
-            }
             }
         }
     }
+
+}

@@ -23,14 +23,14 @@ public class App extends Application {
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
+    static void setRoot(String fxml) {
         try {
-            trysetRoot(fxml);
+            trySetRoot(fxml);
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
     }
-    static void trysetRoot(String fxml) throws IOException { //Setroot fontos
+    static void trySetRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 
@@ -39,10 +39,9 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         nameDictList = Storage.readContent();
         launch();
-        
     }
 
 }
