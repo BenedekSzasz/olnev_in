@@ -17,10 +17,10 @@ public class MainController {
         System.out.println("Keresés");
         App.setRoot("nameScene");
     }
+
     @FXML
     void onClickExitButton(ActionEvent event) {
-        // System.exit(0);
         Platform.exit();
-    }
+    }    
 
 }
